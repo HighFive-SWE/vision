@@ -9,9 +9,12 @@ from .utils import LANDMARK_COUNT, mirror_horizontal, normalize_landmarks
 # per-joint distance above which we flag the joint as "off".
 _JOINT_DRIFT_THRESHOLD = 0.22
 
-# accuracy bands — used by callers to pick feedback copy.
-CORRECT = 0.8
-PARTIAL = 0.5
+# accuracy bands — phase 6 recalibration lowered the "correct" floor to 0.60
+# to match real human variance. excellence is a within-success quality tier
+# that lives in the feedback layer, not the comparator.
+CORRECT = 0.60
+PARTIAL = 0.40
+EXCELLENT = 0.85
 
 
 @dataclass
