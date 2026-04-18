@@ -82,6 +82,7 @@ def _build(
 
 
 GESTURES: dict[str, np.ndarray] = {
+    # phase 6 originals
     "hello":     _build("side",         ("ext",      "ext",      "ext",      "ext")),
     "thank_you": _build("side",         ("ext",      "ext",      "ext",      "ext"),      z_shift=-0.35),
     "please":    _build("side",         ("half",     "half",     "half",     "half")),
@@ -97,6 +98,19 @@ GESTURES: dict[str, np.ndarray] = {
     "tired":     _build("across",       ("bent_tip", "bent_tip", "bent_tip", "bent_tip")),
     "play":      _build("corner",       ("fold",     "fold",     "fold",     "ext")),
     "sleep":     _build("inline",       ("half",     "half",     "half",     "half"),     z_shift=-0.25),
+    # phase 8 expansion
+    "drink":     _build("side",         ("half",     "half",     "fold",     "fold"),     z_shift=0.15),
+    "eat":       _build("inline",       ("half",     "half",     "half",     "half")),
+    "friend":    _build("across",       ("ext",      "fold",     "fold",     "fold"),     z_shift=-0.15),
+    "family":    _build("pinch_index",  ("fold",     "fold",     "fold",     "fold"),     z_shift=0.10),
+    "doctor":    _build("touch_middle", ("ext",      "fold",     "fold",     "fold"),     z_shift=0.15),
+    "school":    _build("side",         ("ext",      "ext",      "ext",      "ext"),      z_shift=0.15),
+    "home":      _build("pinch_index",  ("tip_in",   "tip_in",   "tip_in",   "tip_in"),   z_shift=0.15),
+    "wait":      _build("side",         ("half",     "half",     "half",     "half"),     z_shift=0.20),
+    "come":      _build("across",       ("ext",      "fold",     "fold",     "fold"),     z_shift=0.25),
+    "go":        _build("up",           ("ext",      "fold",     "fold",     "fold")),
+    "more":      _build("pinch_index",  ("tip_in",   "tip_in",   "tip_in",   "tip_in"),   z_shift=-0.15),
+    "finished":  _build("side",         ("ext",      "ext",      "ext",      "ext"),      z_shift=-0.15),
 }
 
 
