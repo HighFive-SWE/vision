@@ -111,6 +111,36 @@ GESTURES: dict[str, np.ndarray] = {
     "go":        _build("up",           ("ext",      "fold",     "fold",     "fold")),
     "more":      _build("pinch_index",  ("tip_in",   "tip_in",   "tip_in",   "tip_in"),   z_shift=-0.15),
     "finished":  _build("side",         ("ext",      "ext",      "ext",      "ext"),      z_shift=-0.15),
+    # asl fingerspelling — 26-letter alphabet. shapes are composed from the
+    # same thumb + finger state library; z_shifts disambiguate letters that
+    # share a finger configuration but differ in palm tilt (e.g. e/yes,
+    # w/water, o/food).
+    "letter_a":  _build("up",           ("fold",     "fold",     "fold",     "fold"),     z_shift=-0.10),
+    "letter_b":  _build("across",       ("ext",      "ext",      "ext",      "ext")),
+    "letter_c":  _build("side",         ("half",     "half",     "half",     "half"),     z_shift=-0.10),
+    "letter_d":  _build("pinch_index",  ("ext",      "fold",     "fold",     "fold")),
+    "letter_e":  _build("across",       ("fold",     "fold",     "fold",     "fold"),     z_shift=-0.10),
+    "letter_f":  _build("pinch_index",  ("fold",     "ext",      "ext",      "ext")),
+    "letter_g":  _build("up",           ("ext",      "fold",     "fold",     "fold"),     z_shift=0.20),
+    "letter_h":  _build("inline",       ("ext",      "ext",      "fold",     "fold")),
+    "letter_i":  _build("across",       ("fold",     "fold",     "fold",     "ext")),
+    "letter_j":  _build("across",       ("fold",     "fold",     "fold",     "ext"),      z_shift=0.15),
+    "letter_k":  _build("between",      ("ext",      "half",     "fold",     "fold")),
+    "letter_l":  _build("up",           ("ext",      "fold",     "fold",     "fold"),     z_shift=-0.05),
+    "letter_m":  _build("between",      ("fold",     "fold",     "fold",     "fold"),     z_shift=0.10),
+    "letter_n":  _build("between",      ("fold",     "fold",     "fold",     "fold"),     z_shift=-0.10),
+    "letter_o":  _build("pinch_index",  ("tip_in",   "tip_in",   "tip_in",   "tip_in"),   z_shift=0.05),
+    "letter_p":  _build("between",      ("ext",      "half",     "fold",     "fold"),     z_shift=-0.25),
+    "letter_q":  _build("up",           ("ext",      "fold",     "fold",     "fold"),     z_shift=-0.20),
+    "letter_r":  _build("across",       ("ext",      "half",     "fold",     "fold")),
+    "letter_s":  _build("across",       ("fold",     "fold",     "fold",     "fold"),     z_shift=0.10),
+    "letter_t":  _build("between",      ("fold",     "fold",     "fold",     "fold"),     z_shift=0.25),
+    "letter_u":  _build("across",       ("ext",      "ext",      "fold",     "fold")),
+    "letter_v":  _build("across",       ("ext",      "ext",      "fold",     "fold"),     z_shift=0.15),
+    "letter_w":  _build("across",       ("ext",      "ext",      "ext",      "fold"),     z_shift=0.10),
+    "letter_x":  _build("across",       ("bent_tip", "fold",     "fold",     "fold")),
+    "letter_y":  _build("corner",       ("fold",     "fold",     "fold",     "ext"),      z_shift=0.05),
+    "letter_z":  _build("across",       ("ext",      "fold",     "fold",     "fold"),     z_shift=0.05),
 }
 
 
