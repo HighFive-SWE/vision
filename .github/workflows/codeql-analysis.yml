@@ -17,16 +17,23 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Checkout CodeQL queries
+        uses: actions/checkout@v4
+        with:
+          repository: HighFive-SWE/codeQL
+          path: codeql-queries
+          token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
         with:
           languages: python
           config: |
             queries:
-              - uses: HighFive-SWE/codeQL/.codeql/queries/too-many-parameters.ql@main
-              - uses: HighFive-SWE/codeQL/.codeql/queries/long-function.ql@main
-              - uses: HighFive-SWE/codeQL/.codeql/queries/missing-public-docstring.ql@main
-              - uses: HighFive-SWE/codeQL/.codeql/queries/magic-numbers.ql@main
+              - uses: ./codeql-queries/.codeql/queries/too-many-parameters.ql
+              - uses: ./codeql-queries/.codeql/queries/long-function.ql
+              - uses: ./codeql-queries/.codeql/queries/missing-public-docstring.ql
+              - uses: ./codeql-queries/.codeql/queries/magic-numbers.ql
 
       - name: Autobuild
         uses: github/codeql-action/autobuild@v3
