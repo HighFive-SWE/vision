@@ -1,0 +1,37 @@
+name: CodeQL Clean Code Analysis
+
+on:
+  push:
+    branches: [main, "feature/**", "new-feature/**"]
+  pull_request:
+    branches: [main]
+
+jobs:
+  codeql:
+    name: CodeQL Analysis
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+      actions: read
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: python
+          config: |
+            queries:
+              - uses: HighFive-SWE/codeQL/.codeql/queries/too-many-parameters.ql@main
+              - uses: HighFive-SWE/codeQL/.codeql/queries/long-function.ql@main
+              - uses: HighFive-SWE/codeQL/.codeql/queries/missing-public-docstring.ql@main
+              - uses: HighFive-SWE/codeQL/.codeql/queries/magic-numbers.ql@main
+
+      - name: Autobuild
+        uses: github/codeql-action/autobuild@v3
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
+        with:
+          category: clean-code
