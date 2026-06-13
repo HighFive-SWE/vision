@@ -111,6 +111,26 @@ GESTURES: dict[str, np.ndarray] = {
     "go":        _build("up",           ("ext",      "fold",     "fold",     "fold")),
     "more":      _build("pinch_index",  ("tip_in",   "tip_in",   "tip_in",   "tip_in"),   z_shift=-0.15),
     "finished":  _build("side",         ("ext",      "ext",      "ext",      "ext"),      z_shift=-0.15),
+    # phase 9 expansion: feelings, family, and the world around the learner.
+    # recipes stay unique within the word library so live mode never ties.
+    "happy":     _build("side",         ("ext",      "ext",      "ext",      "ext"),      z_shift=0.30),
+    "sad":       _build("across",       ("ext",      "ext",      "ext",      "ext"),      z_shift=-0.20),
+    "angry":     _build("across",       ("bent_tip", "bent_tip", "bent_tip", "bent_tip"), z_shift=0.20),
+    "scared":    _build("across",       ("bent_tip", "bent_tip", "bent_tip", "bent_tip"), z_shift=-0.20),
+    "love":      _build("across",       ("fold",     "fold",     "fold",     "fold"),     z_shift=-0.20),
+    "good":      _build("inline",       ("ext",      "ext",      "ext",      "ext")),
+    "bad":       _build("inline",       ("ext",      "ext",      "ext",      "ext"),      z_shift=-0.35),
+    "want":      _build("side",         ("bent_tip", "bent_tip", "bent_tip", "bent_tip")),
+    "like":      _build("touch_middle", ("fold",     "ext",      "fold",     "fold")),
+    "mom":       _build("corner",       ("ext",      "ext",      "ext",      "ext")),
+    "dad":       _build("corner",       ("ext",      "ext",      "ext",      "ext"),      z_shift=0.25),
+    "baby":      _build("inline",       ("fold",     "fold",     "fold",     "fold")),
+    "book":      _build("between",      ("ext",      "ext",      "ext",      "ext")),
+    "ball":      _build("pinch_index",  ("half",     "half",     "half",     "half")),
+    "music":     _build("inline",       ("ext",      "ext",      "ext",      "ext"),      z_shift=-0.15),
+    "hot":       _build("up",           ("bent_tip", "bent_tip", "bent_tip", "bent_tip")),
+    "cold":      _build("up",           ("fold",     "fold",     "fold",     "fold"),     z_shift=0.25),
+    "where":     _build("up",           ("ext",      "fold",     "fold",     "fold"),     z_shift=0.30),
     # asl fingerspelling — 26-letter alphabet. shapes are composed from the
     # same thumb + finger state library; z_shifts disambiguate letters that
     # share a finger configuration but differ in palm tilt (e.g. e/yes,
