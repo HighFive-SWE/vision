@@ -131,6 +131,22 @@ GESTURES: dict[str, np.ndarray] = {
     "hot":       _build("up",           ("bent_tip", "bent_tip", "bent_tip", "bent_tip")),
     "cold":      _build("up",           ("fold",     "fold",     "fold",     "fold"),     z_shift=0.25),
     "where":     _build("up",           ("ext",      "fold",     "fold",     "fold"),     z_shift=0.30),
+    # jun 2026 expansion: time, animals, weather, and a few everyday verbs.
+    "name":      _build("inline",       ("ext",      "ext",      "fold",     "fold"),     z_shift=0.10),
+    "again":     _build("touch_middle", ("half",     "half",     "half",     "half")),
+    "now":       _build("up",           ("half",     "half",     "half",     "half")),
+    "today":     _build("up",           ("half",     "half",     "half",     "half"),     z_shift=0.25),
+    "night":     _build("corner",       ("half",     "half",     "half",     "half")),
+    "morning":   _build("corner",       ("ext",      "ext",      "fold",     "fold")),
+    "dog":       _build("touch_middle", ("bent_tip", "bent_tip", "bent_tip", "bent_tip")),
+    "cat":       _build("pinch_index",  ("ext",      "ext",      "fold",     "fold")),
+    "fish":      _build("inline",       ("half",     "half",     "half",     "half"),     z_shift=0.20),
+    "sun":       _build("up",           ("ext",      "ext",      "ext",      "ext")),
+    "rain":      _build("between",      ("half",     "half",     "half",     "half")),
+    "car":       _build("across",       ("fold",     "fold",     "fold",     "fold"),     z_shift=0.30),
+    "open":      _build("between",      ("ext",      "ext",      "ext",      "ext"),      z_shift=0.20),
+    "big":       _build("corner",       ("fold",     "fold",     "fold",     "fold")),
+    "small":     _build("corner",       ("fold",     "fold",     "fold",     "fold"),     z_shift=0.20),
     # asl fingerspelling — 26-letter alphabet. shapes are composed from the
     # same thumb + finger state library; z_shifts disambiguate letters that
     # share a finger configuration but differ in palm tilt (e.g. e/yes,
